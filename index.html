@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexlink - Find Your Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #4f46e5;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(120deg, #f0f4ff 0%, #ffffff 100%);
+            color: var(--text-dark);
+        }
+
+        .hero-section {
+            background: url('https://source.unsplash.com/random/1920x1080/?friends') center/cover;
+            height: 80vh;
+            position: relative;
+            margin-bottom: 5rem;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            color: white !important;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+        /* 新增页脚样式 */
+        .custom-footer {
+            background: #1a365d !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Nexlink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <div class="dropdown">
+                            <button class="btn gradient-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Get Started
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="signup.html">Registered Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login Account</a></li>
+                                <li><a class="dropdown-item" href="reset-password.html">Retrieve password</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay d-flex align-items-center">
+            <div class="container text-white text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-4">Build Meaningful Connections</h1>
+                <p class="lead mb-5">Join thousands who've found their community through shared interests and values.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <div class="dropdown">
+                        <button class="btn gradient-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Start Free Trial
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="signup.html">Registered Account</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login Account</a></li>
+                            <li><a class="dropdown-item" href="reset-password.html">Retrieve password</a></li>
+                        </ul>
+                    </div>
+                    <a href="#features" class="btn btn-outline-light">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Why Choose Nexlink?</h2>
+                <p class="text-muted">Discover features designed for authentic connections</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="feature-card p-4 h-100">
+                        <div class="mb-3">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4>Smart Matching</h4>
+                        <p class="text-muted">Advanced AI finds compatible matches based on interests and personality.</p>
+                    </div>
+                </div>
+                <!-- 其他功能卡保持相同结构 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Success Stories</h2>
+                <p class="text-muted">Hear from our thriving community members</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center">
+                            <img src="https://i.pravatar.cc/150?img=1" class="testimonial-img mb-3" alt="User">
+                            <h5>Sarah Johnson</h5>
+                            <p class="text-muted">"Through Nexlink, I found my hiking group. Life-changing experience!"</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他推荐保持相同结构 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="custom-footer text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Nexlink</h5>
+                    <p class="text-muted">Building meaningful connections since 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-decoration-none text-muted">Term of service</a></li>
+                        <li><a href="privacy.html" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-decoration-none text-muted">contact information</a></li>
+                        <li class="text-muted">mikeyiscool05@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
